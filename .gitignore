@@ -1,0 +1,29 @@
+# JIGSAWS raw data is distributed by JHU after registration; it is never committed.
+data/
+# per-trial video embeddings and flow, rebuilt by code/run_all.py
+cache/
+
+# LaTeX build output (the compiled PDFs live in docs/)
+build/
+*.aux
+*.bbl
+*.blg
+*.out
+*.nav
+*.snm
+*.toc
+*.synctex.gz
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# local tooling
+.ai/
+.claude/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

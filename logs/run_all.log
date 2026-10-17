@@ -1,0 +1,88 @@
+22:17:36 39 trials, classes {'N': np.int64(19), 'I': np.int64(10), 'E': np.int64(10)}, 8 official LOUO folds
+22:17:48 [ 1/39] Suturing_B001: 5635 kin frames, 188 video frames, 376 flow pairs
+22:17:52 [ 2/39] Suturing_B002: 3445 kin frames, 116 video frames, 231 flow pairs
+22:17:56 [ 3/39] Suturing_B003: 3432 kin frames, 115 video frames, 230 flow pairs
+22:18:00 [ 4/39] Suturing_B004: 3257 kin frames, 110 video frames, 219 flow pairs
+22:18:04 [ 5/39] Suturing_B005: 2848 kin frames, 96 video frames, 191 flow pairs
+22:18:08 [ 6/39] Suturing_C001: 3180 kin frames, 107 video frames, 213 flow pairs
+22:18:12 [ 7/39] Suturing_C002: 3267 kin frames, 110 video frames, 219 flow pairs
+22:18:16 [ 8/39] Suturing_C003: 3161 kin frames, 106 video frames, 211 flow pairs
+22:18:19 [ 9/39] Suturing_C004: 2479 kin frames, 84 video frames, 167 flow pairs
+22:18:22 [10/39] Suturing_C005: 2577 kin frames, 87 video frames, 172 flow pairs
+22:18:25 [11/39] Suturing_D001: 2800 kin frames, 94 video frames, 188 flow pairs
+22:18:28 [12/39] Suturing_D002: 2214 kin frames, 74 video frames, 148 flow pairs
+22:18:31 [13/39] Suturing_D003: 2317 kin frames, 78 video frames, 155 flow pairs
+22:18:34 [14/39] Suturing_D004: 2742 kin frames, 92 video frames, 184 flow pairs
+22:18:36 [15/39] Suturing_D005: 1779 kin frames, 60 video frames, 120 flow pairs
+22:18:41 [16/39] Suturing_E001: 3593 kin frames, 121 video frames, 241 flow pairs
+22:18:44 [17/39] Suturing_E002: 2948 kin frames, 99 video frames, 197 flow pairs
+22:18:47 [18/39] Suturing_E003: 2605 kin frames, 87 video frames, 174 flow pairs
+22:18:51 [19/39] Suturing_E004: 2926 kin frames, 98 video frames, 196 flow pairs
+22:18:54 [20/39] Suturing_E005: 2483 kin frames, 83 video frames, 166 flow pairs
+22:18:57 [21/39] Suturing_F001: 2838 kin frames, 95 video frames, 190 flow pairs
+22:19:00 [22/39] Suturing_F002: 2375 kin frames, 80 video frames, 159 flow pairs
+22:19:03 [23/39] Suturing_F003: 2265 kin frames, 76 video frames, 152 flow pairs
+22:19:05 [24/39] Suturing_F004: 2373 kin frames, 80 video frames, 159 flow pairs
+22:19:08 [25/39] Suturing_F005: 2039 kin frames, 69 video frames, 137 flow pairs
+22:19:20 [26/39] Suturing_G001: 9012 kin frames, 301 video frames, 602 flow pairs
+22:19:24 [27/39] Suturing_G002: 3379 kin frames, 113 video frames, 226 flow pairs
+22:19:30 [28/39] Suturing_G003: 5211 kin frames, 174 video frames, 348 flow pairs
+22:19:33 [29/39] Suturing_G004: 2650 kin frames, 89 video frames, 177 flow pairs
+22:19:36 [30/39] Suturing_G005: 2454 kin frames, 83 video frames, 165 flow pairs
+22:19:42 [31/39] Suturing_H001: 5654 kin frames, 189 video frames, 378 flow pairs
+22:19:47 [32/39] Suturing_H003: 3395 kin frames, 114 video frames, 228 flow pairs
+22:19:52 [33/39] Suturing_H004: 4094 kin frames, 137 video frames, 274 flow pairs
+22:19:56 [34/39] Suturing_H005: 3436 kin frames, 115 video frames, 230 flow pairs
+22:20:02 [35/39] Suturing_I001: 4316 kin frames, 144 video frames, 288 flow pairs
+22:20:07 [36/39] Suturing_I002: 4412 kin frames, 148 video frames, 295 flow pairs
+22:20:13 [37/39] Suturing_I003: 4284 kin frames, 143 video frames, 286 flow pairs
+22:20:18 [38/39] Suturing_I004: 3730 kin frames, 125 video frames, 250 flow pairs
+22:20:22 [39/39] Suturing_I005: 3773 kin frames, 126 video frames, 252 flow pairs
+22:20:22 M0 majority
+22:20:22 M0   macro-F1 0.218  acc 0.487  (Majority class)
+22:20:22 M1 kinematics simple
+22:20:24 M1   macro-F1 0.515  acc 0.615  (Kinematics: simple statistics)
+22:20:24 M2a-c video
+22:20:33 M2a  macro-F1 0.345  acc 0.436  (Video: appearance (ResNet-18))
+22:20:35 M2b  macro-F1 0.371  acc 0.487  (Video: scene-change dynamics)
+22:20:37 M2c  macro-F1 0.420  acc 0.513  (Video: optical flow)
+22:20:37 M3 fusion
+22:20:37 M3   macro-F1 0.443  acc 0.538  (Late fusion K-simple + V-dyn (primary))
+22:20:37 M3b  macro-F1 0.450  acc 0.538  (Late fusion K-simple + V-appear)
+22:20:37 M3c  macro-F1 0.481  acc 0.615  (Late fusion K-simple + V-flow)
+22:20:39 M3d  macro-F1 0.461  acc 0.615  (Early fusion K-simple + V-dyn)
+22:20:39 M4/M5 improvement
+22:20:41 M4   macro-F1 0.520  acc 0.615  (Kinematics: simple + motion texture)
+22:20:41 M5   macro-F1 0.440  acc 0.538  (Late fusion K-texture + V-dyn)
+22:20:41 controls
+22:20:43 C1   macro-F1 0.375  acc 0.487  (Control: duration only)
+22:20:45 C2   macro-F1 0.342  acc 0.385  (Control: K-simple residualised on log duration)
+22:20:47 C2t  macro-F1 0.344  acc 0.385  (Control: K-simple + texture residualised on log duration)
+A:\BN5211Project\Topic1\OSATS_GRS_Prediction\env\venv\Lib\site-packages\sklearn\model_selection\_split.py:812: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+A:\BN5211Project\Topic1\OSATS_GRS_Prediction\env\venv\Lib\site-packages\sklearn\model_selection\_split.py:812: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+A:\BN5211Project\Topic1\OSATS_GRS_Prediction\env\venv\Lib\site-packages\sklearn\model_selection\_split.py:812: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+A:\BN5211Project\Topic1\OSATS_GRS_Prediction\env\venv\Lib\site-packages\sklearn\model_selection\_split.py:812: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+A:\BN5211Project\Topic1\OSATS_GRS_Prediction\env\venv\Lib\site-packages\sklearn\model_selection\_split.py:812: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+A:\BN5211Project\Topic1\OSATS_GRS_Prediction\env\venv\Lib\site-packages\sklearn\model_selection\_split.py:812: UserWarning: The least populated class in y has only 4 members, which is less than n_splits=5.
+  warnings.warn(
+22:22:04 identity probe K_simple   balanced acc 0.919 (chance 0.125)
+22:22:04 identity probe K_texture  balanced acc 0.894 (chance 0.125)
+22:22:04 identity probe duration   balanced acc 0.256 (chance 0.125)
+22:22:04 identity probe V_appear   balanced acc 1.000 (chance 0.125)
+22:22:04 identity probe V_dyn      balanced acc 0.444 (chance 0.125)
+22:22:04 identity probe V_flow     balanced acc 0.556 (chance 0.125)
+22:22:04 wrote results/results.json
+22:22:04 M1_vs_M0   delta +0.296 [+0.015, +0.443]  (pre-declared)
+22:22:04 M3_vs_M1   delta -0.071 [-0.170, +0.010]  (pre-declared)
+22:22:04 M4_vs_M1   delta +0.005 [-0.043, +0.051]  (pre-declared)
+22:22:04 M3b_vs_M1  delta -0.064 [-0.133, +0.000]
+22:22:04 M3c_vs_M1  delta -0.034 [-0.111, +0.050]
+22:22:04 M3d_vs_M1  delta -0.053 [-0.128, +0.019]
+22:22:04 M5_vs_M4   delta -0.080 [-0.128, +0.014]
+22:22:04 M2b_vs_M0  delta +0.153 [-0.020, +0.259]
+exit 0

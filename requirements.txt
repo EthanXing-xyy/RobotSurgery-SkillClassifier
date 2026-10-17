@@ -1,0 +1,9 @@
+# versions used for the reported run (results/results.json, "environment")
+numpy==2.4.6
+pandas==3.0.5
+scipy==1.17.1
+scikit-learn==1.9.1
+opencv-python-headless==5.0.0.93
+matplotlib==3.11.2
+# install torch / torchvision for your CUDA version, e.g. 2.11.0+cu128 / 0.26.0+cu128:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128

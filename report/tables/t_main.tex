@@ -1,0 +1,25 @@
+\begin{tabular}{@{}l l c c c c c c@{}}
+\toprule
+Model & ID & Macro-F1 [95\% CI] & Acc. & F1$_\mathrm{N}$ & F1$_\mathrm{I}$ & F1$_\mathrm{E}$ & $p$ \\
+\midrule
+\multicolumn{8}{@{}l}{\textit{Required experiment}} \\
+\quad Majority class & M0 & 0.218 [0.074, 0.310] & 0.487 & 0.66 & 0.00 & 0.00 & 1.000 \\
+\quad K-simple & M1 & \textbf{0.515} [0.272, 0.618] & 0.615 & 0.75 & 0.64 & 0.15 & 0.033 \\
+\quad V-appear & M2a & 0.345 [0.125, 0.496] & 0.436 & 0.72 & 0.00 & 0.32 & 0.455 \\
+\quad V-dyn & M2b & 0.371 [0.222, 0.467] & 0.487 & 0.75 & 0.36 & 0.00 & 0.348 \\
+\quad V-flow & M2c & 0.420 [0.178, 0.576] & 0.513 & 0.67 & 0.59 & 0.00 & 0.240 \\
+\quad K-simple + V-dyn, late (primary) & M3 & \textbf{0.443} [0.247, 0.568] & 0.538 & 0.75 & 0.45 & 0.12 & 0.188 \\
+\quad K-simple + V-appear, late & M3b & 0.450 [0.253, 0.567] & 0.538 & 0.72 & 0.50 & 0.13 & 0.133 \\
+\quad K-simple + V-flow, late & M3c & 0.481 [0.236, 0.596] & 0.615 & 0.75 & 0.69 & 0.00 & 0.062 \\
+\quad K-simple + V-dyn, early & M3d & 0.461 [0.242, 0.564] & 0.615 & 0.74 & 0.64 & 0.00 & 0.036 \\
+\addlinespace[2pt]
+\multicolumn{8}{@{}l}{\textit{Focused improvement}} \\
+\quad K-simple + K-texture & M4 & \textbf{0.520} [0.273, 0.619] & 0.615 & 0.75 & 0.67 & 0.14 & 0.074 \\
+\quad (K-simple + K-texture) + V-dyn, late & M5 & 0.440 [0.259, 0.526] & 0.538 & 0.73 & 0.45 & 0.13 & 0.157 \\
+\addlinespace[2pt]
+\multicolumn{8}{@{}l}{\textit{Controls}} \\
+\quad Duration only & C1 & 0.375 [0.275, 0.482] & 0.487 & 0.82 & 0.20 & 0.11 & 0.367 \\
+\quad K-simple, residualised on log duration & C2 & 0.342 [0.167, 0.475] & 0.385 & 0.47 & 0.43 & 0.12 & 0.445 \\
+\quad K-simple + K-texture, residualised & C2t & 0.344 [0.132, 0.509] & 0.385 & 0.38 & 0.53 & 0.12 & 0.371 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,2130 @@
+{
+ "models": {
+  "M0": {
+   "macro_f1": 0.21839080459770113,
+   "accuracy": 0.48717948717948717,
+   "balanced_accuracy": 0.3333333333333333,
+   "per_class": {
+    "N": {
+     "precision": 0.48717948717948717,
+     "recall": 1.0,
+     "f1": 0.6551724137931034,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     19,
+     0,
+     0
+    ],
+    [
+     10,
+     0,
+     0
+    ],
+    [
+     10,
+     0,
+     0
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.5,
+   "fold_accuracy_sd": 0.5345224838248488,
+   "bootstrap_macro_f1": {
+    "point": 0.21839080459770113,
+    "lo": 0.07407407407407407,
+    "hi": 0.30985915492957744,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.21839080459770113,
+    "n_permutations": 420,
+    "p_value": 1.0,
+    "null_mean": 0.22218975258133644,
+    "null_sd": 0.003803478632810802
+   },
+   "desc": "Majority class",
+   "chosen": {},
+   "inner_folds_skipped": {}
+  },
+  "M1": {
+   "macro_f1": 0.5146153846153846,
+   "accuracy": 0.6153846153846154,
+   "balanced_accuracy": 0.5631578947368422,
+   "per_class": {
+    "N": {
+     "precision": 0.7142857142857143,
+     "recall": 0.7894736842105263,
+     "f1": 0.75,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.5333333333333333,
+     "recall": 0.8,
+     "f1": 0.64,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.3333333333333333,
+     "recall": 0.1,
+     "f1": 0.15384615384615385,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     15,
+     3,
+     1
+    ],
+    [
+     1,
+     8,
+     1
+    ],
+    [
+     5,
+     4,
+     1
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.75,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.61875,
+   "fold_accuracy_sd": 0.34219616345849685,
+   "bootstrap_macro_f1": {
+    "point": 0.5146153846153846,
+    "lo": 0.27233115468409586,
+    "hi": 0.6175951735707832,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.5146153846153846,
+    "n_permutations": 420,
+    "p_value": 0.03333333333333333,
+    "null_mean": 0.31333981059590815,
+    "null_sd": 0.10607166503205744
+   },
+   "desc": "Kinematics: simple statistics",
+   "chosen": {
+    "B": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "C": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "D": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "E": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "F": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "G": {
+     "C": 0.03,
+     "n_components": null
+    },
+    "H": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "I": {
+     "C": 1.0,
+     "n_components": null
+    }
+   },
+   "inner_folds_skipped": {
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 0,
+    "H": 0,
+    "I": 0
+   }
+  },
+  "M2a": {
+   "macro_f1": 0.34457939721097613,
+   "accuracy": 0.4358974358974359,
+   "balanced_accuracy": 0.34561403508771926,
+   "per_class": {
+    "N": {
+     "precision": 0.7,
+     "recall": 0.7368421052631579,
+     "f1": 0.717948717948718,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.3333333333333333,
+     "recall": 0.3,
+     "f1": 0.3157894736842105,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     14,
+     5,
+     0
+    ],
+    [
+     4,
+     0,
+     6
+    ],
+    [
+     2,
+     5,
+     3
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.45,
+   "fold_accuracy_sd": 0.49856938190329,
+   "bootstrap_macro_f1": {
+    "point": 0.34457939721097613,
+    "lo": 0.12496141975308642,
+    "hi": 0.49603174603174605,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.34457939721097613,
+    "n_permutations": 420,
+    "p_value": 0.45476190476190476,
+    "null_mean": 0.33252040357303514,
+    "null_sd": 0.16409019174146516
+   },
+   "desc": "Video: appearance (ResNet-18)",
+   "chosen": {
+    "B": {
+     "C": 0.01,
+     "n_components": 16
+    },
+    "C": {
+     "C": 0.3,
+     "n_components": 8
+    },
+    "D": {
+     "C": 0.01,
+     "n_components": 4
+    },
+    "E": {
+     "C": 0.01,
+     "n_components": 4
+    },
+    "F": {
+     "C": 0.01,
+     "n_components": 4
+    },
+    "G": {
+     "C": 0.01,
+     "n_components": 4
+    },
+    "H": {
+     "C": 0.01,
+     "n_components": 4
+    },
+    "I": {
+     "C": 0.01,
+     "n_components": 4
+    }
+   },
+   "inner_folds_skipped": {
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 0,
+    "H": 0,
+    "I": 0
+   }
+  },
+  "M2b": {
+   "macro_f1": 0.37121212121212127,
+   "accuracy": 0.48717948717948717,
+   "balanced_accuracy": 0.3964912280701755,
+   "per_class": {
+    "N": {
+     "precision": 0.7142857142857143,
+     "recall": 0.7894736842105263,
+     "f1": 0.75,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.3333333333333333,
+     "recall": 0.4,
+     "f1": 0.36363636363636365,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     15,
+     2,
+     2
+    ],
+    [
+     2,
+     4,
+     4
+    ],
+    [
+     4,
+     6,
+     0
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.75,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.49374999999999997,
+   "fold_accuracy_sd": 0.38026071883079676,
+   "bootstrap_macro_f1": {
+    "point": 0.37121212121212127,
+    "lo": 0.2222222222222222,
+    "hi": 0.4674131495836922,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.37121212121212127,
+    "n_permutations": 420,
+    "p_value": 0.3476190476190476,
+    "null_mean": 0.32784138045462086,
+    "null_sd": 0.12546231069102767
+   },
+   "desc": "Video: scene-change dynamics",
+   "chosen": {
+    "B": {
+     "C": 10.0,
+     "n_components": null
+    },
+    "C": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "D": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "E": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "F": {
+     "C": 10.0,
+     "n_components": null
+    },
+    "G": {
+     "C": 0.03,
+     "n_components": null
+    },
+    "H": {
+     "C": 10.0,
+     "n_components": null
+    },
+    "I": {
+     "C": 1.0,
+     "n_components": null
+    }
+   },
+   "inner_folds_skipped": {
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 0,
+    "H": 0,
+    "I": 0
+   }
+  },
+  "M2c": {
+   "macro_f1": 0.419753086419753,
+   "accuracy": 0.5128205128205128,
+   "balanced_accuracy": 0.47719298245614034,
+   "per_class": {
+    "N": {
+     "precision": 0.7058823529411765,
+     "recall": 0.631578947368421,
+     "f1": 0.6666666666666666,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.47058823529411764,
+     "recall": 0.8,
+     "f1": 0.5925925925925926,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     12,
+     4,
+     3
+    ],
+    [
+     0,
+     8,
+     2
+    ],
+    [
+     5,
+     5,
+     0
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.0,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.4,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.5,
+   "fold_accuracy_sd": 0.465985898008574,
+   "bootstrap_macro_f1": {
+    "point": 0.419753086419753,
+    "lo": 0.17777777777777778,
+    "hi": 0.5756603867623604,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.419753086419753,
+    "n_permutations": 420,
+    "p_value": 0.24047619047619048,
+    "null_mean": 0.31885802600088314,
+    "null_sd": 0.1404870158466679
+   },
+   "desc": "Video: optical flow",
+   "chosen": {
+    "B": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "C": {
+     "C": 0.03,
+     "n_components": null
+    },
+    "D": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "E": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "F": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "G": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "H": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "I": {
+     "C": 0.01,
+     "n_components": null
+    }
+   },
+   "inner_folds_skipped": {
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 0,
+    "H": 0,
+    "I": 0
+   }
+  },
+  "M3": {
+   "macro_f1": 0.4431818181818182,
+   "accuracy": 0.5384615384615384,
+   "balanced_accuracy": 0.46315789473684216,
+   "per_class": {
+    "N": {
+     "precision": 0.7142857142857143,
+     "recall": 0.7894736842105263,
+     "f1": 0.75,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.4166666666666667,
+     "recall": 0.5,
+     "f1": 0.45454545454545453,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.16666666666666666,
+     "recall": 0.1,
+     "f1": 0.125,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     15,
+     3,
+     1
+    ],
+    [
+     1,
+     5,
+     4
+    ],
+    [
+     5,
+     4,
+     1
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.75,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.54375,
+   "fold_accuracy_sd": 0.36197622258138135,
+   "bootstrap_macro_f1": {
+    "point": 0.4431818181818182,
+    "lo": 0.24731182795698925,
+    "hi": 0.5678675960162636,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.4431818181818182,
+    "n_permutations": 420,
+    "p_value": 0.1880952380952381,
+    "null_mean": 0.32784138045462086,
+    "null_sd": 0.12915773825454435
+   },
+   "desc": "Late fusion K-simple + V-dyn (primary)",
+   "chosen": {},
+   "inner_folds_skipped": {}
+  },
+  "M3b": {
+   "macro_f1": 0.45042735042735044,
+   "accuracy": 0.5384615384615384,
+   "balanced_accuracy": 0.4789473684210526,
+   "per_class": {
+    "N": {
+     "precision": 0.7,
+     "recall": 0.7368421052631579,
+     "f1": 0.717948717948718,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.42857142857142855,
+     "recall": 0.6,
+     "f1": 0.5,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.2,
+     "recall": 0.1,
+     "f1": 0.13333333333333333,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     14,
+     4,
+     1
+    ],
+    [
+     1,
+     6,
+     3
+    ],
+    [
+     5,
+     4,
+     1
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.4,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.75,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.5437500000000001,
+   "fold_accuracy_sd": 0.32889153661525383,
+   "bootstrap_macro_f1": {
+    "point": 0.45042735042735044,
+    "lo": 0.25304979457492366,
+    "hi": 0.566706349206349,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.45042735042735044,
+    "n_permutations": 420,
+    "p_value": 0.13333333333333333,
+    "null_mean": 0.323493276909426,
+    "null_sd": 0.11594121632984032
+   },
+   "desc": "Late fusion K-simple + V-appear",
+   "chosen": {},
+   "inner_folds_skipped": {}
+  },
+  "M3c": {
+   "macro_f1": 0.4807692307692308,
+   "accuracy": 0.6153846153846154,
+   "balanced_accuracy": 0.5631578947368422,
+   "per_class": {
+    "N": {
+     "precision": 0.7142857142857143,
+     "recall": 0.7894736842105263,
+     "f1": 0.75,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.5625,
+     "recall": 0.9,
+     "f1": 0.6923076923076923,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     15,
+     3,
+     1
+    ],
+    [
+     0,
+     9,
+     1
+    ],
+    [
+     6,
+     4,
+     0
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.75,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.61875,
+   "fold_accuracy_sd": 0.4035003097892243,
+   "bootstrap_macro_f1": {
+    "point": 0.4807692307692308,
+    "lo": 0.23607253086419755,
+    "hi": 0.5957132298595713,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.4807692307692308,
+    "n_permutations": 420,
+    "p_value": 0.06190476190476191,
+    "null_mean": 0.3052803700364676,
+    "null_sd": 0.10821270522288777
+   },
+   "desc": "Late fusion K-simple + V-flow",
+   "chosen": {},
+   "inner_folds_skipped": {}
+  },
+  "M3d": {
+   "macro_f1": 0.46139534883720934,
+   "accuracy": 0.6153846153846154,
+   "balanced_accuracy": 0.5473684210526316,
+   "per_class": {
+    "N": {
+     "precision": 0.6666666666666666,
+     "recall": 0.8421052631578947,
+     "f1": 0.7441860465116279,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.5333333333333333,
+     "recall": 0.8,
+     "f1": 0.64,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     16,
+     3,
+     0
+    ],
+    [
+     2,
+     8,
+     0
+    ],
+    [
+     6,
+     4,
+     0
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.625,
+   "fold_accuracy_sd": 0.406201920231798,
+   "bootstrap_macro_f1": {
+    "point": 0.46139534883720934,
+    "lo": 0.24242424242424243,
+    "hi": 0.5640505198180635,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.46139534883720934,
+    "n_permutations": 420,
+    "p_value": 0.03571428571428571,
+    "null_mean": 0.28462825933756164,
+    "null_sd": 0.08985223632950248
+   },
+   "desc": "Early fusion K-simple + V-dyn",
+   "chosen": {
+    "B": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "C": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "D": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "E": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "F": {
+     "C": 0.3,
+     "n_components": null
+    },
+    "G": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "H": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "I": {
+     "C": 10.0,
+     "n_components": null
+    }
+   },
+   "inner_folds_skipped": {
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 0,
+    "H": 0,
+    "I": 0
+   }
+  },
+  "M4": {
+   "macro_f1": 0.5198412698412698,
+   "accuracy": 0.6153846153846154,
+   "balanced_accuracy": 0.5631578947368422,
+   "per_class": {
+    "N": {
+     "precision": 0.7142857142857143,
+     "recall": 0.7894736842105263,
+     "f1": 0.75,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.5714285714285714,
+     "recall": 0.8,
+     "f1": 0.6666666666666666,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.25,
+     "recall": 0.1,
+     "f1": 0.14285714285714285,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     15,
+     2,
+     2
+    ],
+    [
+     1,
+     8,
+     1
+    ],
+    [
+     5,
+     4,
+     1
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.5,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.6125,
+   "fold_accuracy_sd": 0.348209706929603,
+   "bootstrap_macro_f1": {
+    "point": 0.5198412698412698,
+    "lo": 0.2727243363871271,
+    "hi": 0.6190996911585143,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.5198412698412698,
+    "n_permutations": 420,
+    "p_value": 0.07380952380952381,
+    "null_mean": 0.3203315431727793,
+    "null_sd": 0.11611026051197773
+   },
+   "desc": "Kinematics: simple + motion texture",
+   "chosen": {
+    "B": {
+     "C": 0.3,
+     "n_components": null
+    },
+    "C": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "D": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "E": {
+     "C": 0.03,
+     "n_components": null
+    },
+    "F": {
+     "C": 0.3,
+     "n_components": null
+    },
+    "G": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "H": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "I": {
+     "C": 0.01,
+     "n_components": null
+    }
+   },
+   "inner_folds_skipped": {
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 0,
+    "H": 0,
+    "I": 0
+   }
+  },
+  "M5": {
+   "macro_f1": 0.4398620349839862,
+   "accuracy": 0.5384615384615384,
+   "balanced_accuracy": 0.46315789473684216,
+   "per_class": {
+    "N": {
+     "precision": 0.6818181818181818,
+     "recall": 0.7894736842105263,
+     "f1": 0.7317073170731707,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.4166666666666667,
+     "recall": 0.5,
+     "f1": 0.45454545454545453,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.2,
+     "recall": 0.1,
+     "f1": 0.13333333333333333,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     15,
+     3,
+     1
+    ],
+    [
+     2,
+     5,
+     3
+    ],
+    [
+     5,
+     4,
+     1
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.4,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.75,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.54375,
+   "fold_accuracy_sd": 0.32889153661525383,
+   "bootstrap_macro_f1": {
+    "point": 0.4398620349839862,
+    "lo": 0.2586153788739996,
+    "hi": 0.5256995647721453,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.4398620349839862,
+    "n_permutations": 420,
+    "p_value": 0.15714285714285714,
+    "null_mean": 0.3247193186217576,
+    "null_sd": 0.11048900172205472
+   },
+   "desc": "Late fusion K-texture + V-dyn",
+   "chosen": {},
+   "inner_folds_skipped": {}
+  },
+  "C1": {
+   "macro_f1": 0.37525865946918574,
+   "accuracy": 0.48717948717948717,
+   "balanced_accuracy": 0.38070175438596493,
+   "per_class": {
+    "N": {
+     "precision": 0.8,
+     "recall": 0.8421052631578947,
+     "f1": 0.8205128205128205,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.2,
+     "recall": 0.2,
+     "f1": 0.2,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.1111111111111111,
+     "recall": 0.1,
+     "f1": 0.10526315789473684,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     16,
+     0,
+     3
+    ],
+    [
+     3,
+     2,
+     5
+    ],
+    [
+     1,
+     8,
+     1
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.4,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 1.0,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.5,
+   "fold_accuracy_sd": 0.4140393356054125,
+   "bootstrap_macro_f1": {
+    "point": 0.37525865946918574,
+    "lo": 0.2754663487016429,
+    "hi": 0.4820328131252501,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.37525865946918574,
+    "n_permutations": 420,
+    "p_value": 0.36666666666666664,
+    "null_mean": 0.33252040357303514,
+    "null_sd": 0.1413164699013384
+   },
+   "desc": "Control: duration only",
+   "chosen": {
+    "B": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "C": {
+     "C": 1.0,
+     "n_components": null
+    },
+    "D": {
+     "C": 3.0,
+     "n_components": null
+    },
+    "E": {
+     "C": 3.0,
+     "n_components": null
+    },
+    "F": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "G": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "H": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "I": {
+     "C": 0.01,
+     "n_components": null
+    }
+   },
+   "inner_folds_skipped": {
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 0,
+    "H": 0,
+    "I": 0
+   }
+  },
+  "C2": {
+   "macro_f1": 0.34203795934849907,
+   "accuracy": 0.38461538461538464,
+   "balanced_accuracy": 0.35789473684210527,
+   "per_class": {
+    "N": {
+     "precision": 0.47368421052631576,
+     "recall": 0.47368421052631576,
+     "f1": 0.47368421052631576,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.38461538461538464,
+     "recall": 0.5,
+     "f1": 0.43478260869565216,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.14285714285714285,
+     "recall": 0.1,
+     "f1": 0.11764705882352941,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     9,
+     4,
+     6
+    ],
+    [
+     5,
+     5,
+     0
+    ],
+    [
+     5,
+     4,
+     1
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.25,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.38125,
+   "fold_accuracy_sd": 0.306987086745634,
+   "bootstrap_macro_f1": {
+    "point": 0.34203795934849907,
+    "lo": 0.16661170528817587,
+    "hi": 0.47533670767541714,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.34203795934849907,
+    "n_permutations": 420,
+    "p_value": 0.4452380952380952,
+    "null_mean": 0.32998362268368325,
+    "null_sd": 0.11239311416133872
+   },
+   "desc": "Control: K-simple residualised on log duration",
+   "chosen": {
+    "B": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "C": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "D": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "E": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "F": {
+     "C": 0.1,
+     "n_components": null
+    },
+    "G": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "H": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "I": {
+     "C": 0.01,
+     "n_components": null
+    }
+   },
+   "inner_folds_skipped": {
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 0,
+    "H": 0,
+    "I": 0
+   }
+  },
+  "C2t": {
+   "macro_f1": 0.3444444444444444,
+   "accuracy": 0.38461538461538464,
+   "balanced_accuracy": 0.4052631578947368,
+   "per_class": {
+    "N": {
+     "precision": 0.46153846153846156,
+     "recall": 0.3157894736842105,
+     "f1": 0.375,
+     "support": 19
+    },
+    "I": {
+     "precision": 0.4,
+     "recall": 0.8,
+     "f1": 0.5333333333333333,
+     "support": 10
+    },
+    "E": {
+     "precision": 0.16666666666666666,
+     "recall": 0.1,
+     "f1": 0.125,
+     "support": 10
+    }
+   },
+   "confusion_matrix": [
+    [
+     6,
+     8,
+     5
+    ],
+    [
+     2,
+     8,
+     0
+    ],
+    [
+     5,
+     4,
+     1
+    ]
+   ],
+   "per_user": {
+    "B": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "N"
+    },
+    "C": {
+     "n": 5,
+     "accuracy": 1.0,
+     "true_class": "I"
+    },
+    "D": {
+     "n": 5,
+     "accuracy": 0.2,
+     "true_class": "E"
+    },
+    "E": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "E"
+    },
+    "F": {
+     "n": 5,
+     "accuracy": 0.6,
+     "true_class": "I"
+    },
+    "G": {
+     "n": 5,
+     "accuracy": 0.8,
+     "true_class": "N"
+    },
+    "H": {
+     "n": 4,
+     "accuracy": 0.25,
+     "true_class": "N"
+    },
+    "I": {
+     "n": 5,
+     "accuracy": 0.0,
+     "true_class": "N"
+    }
+   },
+   "fold_accuracy_mean": 0.38125,
+   "fold_accuracy_sd": 0.3741060773936413,
+   "bootstrap_macro_f1": {
+    "point": 0.3444444444444444,
+    "lo": 0.1315496098104794,
+    "hi": 0.5087312030075188,
+    "n_boot": 2000
+   },
+   "permutation": {
+    "observed": 0.3444444444444444,
+    "n_permutations": 420,
+    "p_value": 0.37142857142857144,
+    "null_mean": 0.3097915733691596,
+    "null_sd": 0.12077359276704895
+   },
+   "desc": "Control: K-simple + texture residualised on log duration",
+   "chosen": {
+    "B": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "C": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "D": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "E": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "F": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "G": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "H": {
+     "C": 0.01,
+     "n_components": null
+    },
+    "I": {
+     "C": 0.01,
+     "n_components": null
+    }
+   },
+   "inner_folds_skipped": {
+    "B": 0,
+    "C": 1,
+    "D": 1,
+    "E": 1,
+    "F": 1,
+    "G": 0,
+    "H": 0,
+    "I": 0
+   }
+  }
+ },
+ "paired": {
+  "M1_vs_M0": {
+   "a": "M1",
+   "b": "M0",
+   "pre_declared": true,
+   "point": 0.2962245800176835,
+   "lo": 0.014698718004778233,
+   "hi": 0.4432770259138316,
+   "p_sign": 0.044,
+   "n_boot": 2000
+  },
+  "M3_vs_M1": {
+   "a": "M3",
+   "b": "M1",
+   "pre_declared": true,
+   "point": -0.07143356643356641,
+   "lo": -0.17030073661741918,
+   "hi": 0.010327206640231866,
+   "p_sign": 0.299,
+   "n_boot": 2000
+  },
+  "M4_vs_M1": {
+   "a": "M4",
+   "b": "M1",
+   "pre_declared": true,
+   "point": 0.005225885225885185,
+   "lo": -0.04346270275618098,
+   "hi": 0.05065212218779741,
+   "p_sign": 0.966,
+   "n_boot": 2000
+  },
+  "M3b_vs_M1": {
+   "a": "M3b",
+   "b": "M1",
+   "pre_declared": false,
+   "point": -0.06418803418803415,
+   "lo": -0.13287987012987015,
+   "hi": 0.0,
+   "p_sign": 0.171,
+   "n_boot": 2000
+  },
+  "M3c_vs_M1": {
+   "a": "M3c",
+   "b": "M1",
+   "pre_declared": false,
+   "point": -0.033846153846153804,
+   "lo": -0.11083279071862658,
+   "hi": 0.04951159951159945,
+   "p_sign": 0.692,
+   "n_boot": 2000
+  },
+  "M3d_vs_M1": {
+   "a": "M3d",
+   "b": "M1",
+   "pre_declared": false,
+   "point": -0.053220035778175245,
+   "lo": -0.12806402672225814,
+   "hi": 0.01876830415960856,
+   "p_sign": 0.465,
+   "n_boot": 2000
+  },
+  "M5_vs_M4": {
+   "a": "M5",
+   "b": "M4",
+   "pre_declared": false,
+   "point": -0.07997923485728359,
+   "lo": -0.12823023276999077,
+   "hi": 0.014180138985765579,
+   "p_sign": 0.114,
+   "n_boot": 2000
+  },
+  "M2b_vs_M0": {
+   "a": "M2b",
+   "b": "M0",
+   "pre_declared": false,
+   "point": 0.15282131661442014,
+   "lo": -0.01981209150326796,
+   "hi": 0.25880425880425884,
+   "p_sign": 0.105,
+   "n_boot": 2000
+  }
+ },
+ "identity_probe": {
+  "K_simple": {
+   "balanced_accuracy": 0.91875,
+   "accuracy": 0.9230769230769231,
+   "chance": 0.125
+  },
+  "K_texture": {
+   "balanced_accuracy": 0.89375,
+   "accuracy": 0.8974358974358975,
+   "chance": 0.125
+  },
+  "duration": {
+   "balanced_accuracy": 0.25625,
+   "accuracy": 0.2564102564102564,
+   "chance": 0.125
+  },
+  "V_appear": {
+   "balanced_accuracy": 1.0,
+   "accuracy": 1.0,
+   "chance": 0.125
+  },
+  "V_dyn": {
+   "balanced_accuracy": 0.44375,
+   "accuracy": 0.4358974358974359,
+   "chance": 0.125
+  },
+  "V_flow": {
+   "balanced_accuracy": 0.5562499999999999,
+   "accuracy": 0.5641025641025641,
+   "chance": 0.125
+  }
+ },
+ "pace": {
+  "K_simple": {
+   "median_abs_r_logdur": 0.4203978970387024,
+   "max_abs_r_logdur": 0.7605739840090093
+  },
+  "K_texture": {
+   "median_abs_r_logdur": 0.34421527953710007,
+   "max_abs_r_logdur": 0.9344857411769181
+  },
+  "V_dyn": {
+   "median_abs_r_logdur": 0.5412732909402188,
+   "max_abs_r_logdur": 0.7088681037369929
+  },
+  "V_flow": {
+   "median_abs_r_logdur": 0.35027757785079605,
+   "max_abs_r_logdur": 0.4751455904304716
+  }
+ },
+ "dataset": {
+  "n_trials": 39,
+  "class_counts": {
+   "N": 19,
+   "I": 10,
+   "E": 10
+  },
+  "users": {
+   "B": {
+    "label": "N",
+    "n_trials": 5
+   },
+   "C": {
+    "label": "I",
+    "n_trials": 5
+   },
+   "D": {
+    "label": "E",
+    "n_trials": 5
+   },
+   "E": {
+    "label": "E",
+    "n_trials": 5
+   },
+   "F": {
+    "label": "I",
+    "n_trials": 5
+   },
+   "G": {
+    "label": "N",
+    "n_trials": 5
+   },
+   "H": {
+    "label": "N",
+    "n_trials": 4
+   },
+   "I": {
+    "label": "N",
+    "n_trials": 5
+   }
+  },
+  "folds": [
+   {
+    "held_out": "B",
+    "n_train": 34,
+    "n_test": 5
+   },
+   {
+    "held_out": "C",
+    "n_train": 34,
+    "n_test": 5
+   },
+   {
+    "held_out": "D",
+    "n_train": 34,
+    "n_test": 5
+   },
+   {
+    "held_out": "E",
+    "n_train": 34,
+    "n_test": 5
+   },
+   {
+    "held_out": "F",
+    "n_train": 34,
+    "n_test": 5
+   },
+   {
+    "held_out": "G",
+    "n_train": 34,
+    "n_test": 5
+   },
+   {
+    "held_out": "H",
+    "n_train": 35,
+    "n_test": 4
+   },
+   {
+    "held_out": "I",
+    "n_train": 34,
+    "n_test": 5
+   }
+  ],
+  "duration_s": {
+   "min": 59.3,
+   "max": 300.4,
+   "median": 105.36666666666666
+  },
+  "duration_by_class": {
+   "N": 124.33333333333333,
+   "I": 84.26666666666668,
+   "E": 89.11666666666667
+  },
+  "feature_dims": {
+   "K_simple": 30,
+   "K_texture": 10,
+   "V_appear": 1024,
+   "V_dyn": 8,
+   "V_flow": 15
+  },
+  "video_frames_1hz_total": 4406,
+  "flow_pairs_2hz_total": 8794
+ },
+ "environment": {
+  "python": "3.11.0",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "numpy": "2.4.6",
+  "pandas": "3.0.5",
+  "scikit-learn": "1.9.1",
+  "scipy": "1.17.1",
+  "torch": "2.11.0+cu128",
+  "torchvision": "0.26.0+cu128",
+  "opencv": "5.0.0",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"
+ },
+ "feature_names": {
+  "K_simple": [
+   "duration_s",
+   "SL_path_len",
+   "SL_speed_mean",
+   "SL_speed_std",
+   "SL_speed_p90",
+   "SL_rotspeed_mean",
+   "SL_rotspeed_std",
+   "SL_idle_frac",
+   "SL_economy",
+   "SL_grip_mean",
+   "SL_grip_std",
+   "SL_grip_range",
+   "SL_grip_total_change",
+   "SL_grip_cycles",
+   "SR_path_len",
+   "SR_speed_mean",
+   "SR_speed_std",
+   "SR_speed_p90",
+   "SR_rotspeed_mean",
+   "SR_rotspeed_std",
+   "SR_idle_frac",
+   "SR_economy",
+   "SR_grip_mean",
+   "SR_grip_std",
+   "SR_grip_range",
+   "SR_grip_total_change",
+   "SR_grip_cycles",
+   "bimanual_speed_corr",
+   "bimanual_idle_both",
+   "log_path_ratio"
+  ],
+  "K_texture": [
+   "SL_apen_speed",
+   "SL_apen_rotspeed",
+   "SL_apen_grip",
+   "SL_ldj",
+   "SL_spec_ent_speed",
+   "SR_apen_speed",
+   "SR_apen_rotspeed",
+   "SR_apen_grip",
+   "SR_ldj",
+   "SR_spec_ent_speed"
+  ],
+  "V_dyn": [
+   "dyn_cos_mean",
+   "dyn_cos_std",
+   "dyn_cos_p10",
+   "dyn_cos_p50",
+   "dyn_cos_p90",
+   "dyn_cos_cv",
+   "dyn_l2_mean",
+   "dyn_l2_std"
+  ],
+  "V_flow": [
+   "flow_mag_mean_mean",
+   "flow_mag_mean_std",
+   "flow_mag_mean_p90",
+   "flow_mag_std_mean",
+   "flow_mag_std_std",
+   "flow_mag_std_p90",
+   "flow_mag_p90_mean",
+   "flow_mag_p90_std",
+   "flow_mag_p90_p90",
+   "flow_moving_frac_mean",
+   "flow_moving_frac_std",
+   "flow_moving_frac_p90",
+   "flow_dir_entropy_mean",
+   "flow_dir_entropy_std",
+   "flow_dir_entropy_p90"
+  ]
+ }
+}

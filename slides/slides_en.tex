@@ -1,0 +1,190 @@
+\documentclass[aspectratio=169,10pt,t]{beamer}
+\usepackage{fontspec}
+\setsansfont{IBMPlexSans}[
+  Path = ../fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-SemiBold,
+  BoldItalicFont = *-Italic]
+\setmonofont{IBMPlexMono}[Extension = .otf, UprightFont = *-Regular, Scale = MatchLowercase]
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usefonttheme{professionalfonts}
+\graphicspath{{../figures/}{assets/}}
+\definecolor{nusblue}{HTML}{003D7C}
+\definecolor{nusorange}{HTML}{EF7C00}
+\definecolor{teal}{HTML}{003D7C}
+\definecolor{terra}{HTML}{EF7C00}
+\definecolor{ink}{HTML}{1F2937}
+\definecolor{muted}{HTML}{6B7280}
+\setbeamercolor{normal text}{fg=ink}
+\setbeamercolor{frametitle}{fg=nusblue}
+\setbeamercolor{structure}{fg=nusblue}
+\setbeamercolor{alerted text}{fg=nusorange}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}{\color{nusorange}\small$\blacksquare$}
+\setbeamertemplate{frametitle}{%
+  \begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north east,inner sep=0] at ([xshift=-0.35cm,yshift=-0.25cm]current page.north east) {\includegraphics[height=0.85cm]{NUS_coat_of_arms.pdf}};
+  \end{tikzpicture}%
+  \hbox{\usebeamerfont{frametitle}\color{nusblue}\rule{0pt}{0.85cm}\insertframetitle}%
+  \vskip 4pt\hbox{\color{nusorange}\rule{0.10\paperwidth}{2pt}}\vskip 6pt}
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.42cm,dp=0.14cm]{footbar}%
+  \hspace{1em}\scriptsize\color{white}BN5211 Final Project \textbar\ Topic 1 \textbar\ \GroupName\hfill\insertframenumber\,/\,\inserttotalframenumber\hspace{1em}%
+  \end{beamercolorbox}}
+\setbeamercolor{footbar}{bg=nusblue}
+\setlength{\leftmargini}{1.1em}
+
+\input{../report/team.tex}
+\input{../report/macros.tex}
+\newcommand{\fig}[2][0.80\textheight]{\par{\centering\includegraphics[width=\linewidth,height=#1,keepaspectratio]{#2}\par}}
+
+\begin{document}
+
+\begin{frame}[plain]
+\begin{tikzpicture}[remember picture,overlay]
+\fill[nusblue] (current page.south west) rectangle ([yshift=1.3cm]current page.south east);
+\fill[nusorange] ([yshift=1.3cm]current page.south west) rectangle ([yshift=1.42cm]current page.south east);
+\node[anchor=north west,inner sep=0] at ([xshift=0.8cm,yshift=-0.6cm]current page.north west) {\includegraphics[height=1.5cm]{NationalUniversityofSingapore.pdf}};
+\node[anchor=west,text=white,font=\small] at ([xshift=0.8cm,yshift=0.65cm]current page.south west) {BN5211 Medical Robotic Intelligence \textbar\ Final Project, Topic 1 \textbar\ \ReportDate};
+\node[anchor=north west,inner sep=0,text width=14cm,align=left] at ([xshift=0.8cm,yshift=-2.7cm]current page.north west) {%
+{\LARGE\bfseries\color{nusblue} Surgical skill assessment from kinematics and video\par}
+\vspace{6pt}
+{\large\color{muted} Novice / intermediate / expert on JIGSAWS Suturing under leave-one-user-out\par}
+\vspace{16pt}
+{\bfseries\color{nusorange}\GroupName\par}
+\vspace{4pt}
+{\small\TeamMembers\par}};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Why automate skill assessment?}
+\begin{itemize}
+\item Surgical skill predicts outcomes: the lowest-rated quartile of surgeons had far more complications than the highest-rated one (Birkmeyer et al., 2013).
+\item Expert rating with OSATS is slow, costly and partly subjective.
+\item A surgical robot already logs every instrument movement and the endoscope video, so assessment can use data that are collected anyway.
+\item A useful system must work for a \alert{surgeon it has never seen}, so we hold out whole surgeons (LOUO), not single trials.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Task and data}
+\small JIGSAWS Suturing: \NTrials{} trials from 8 surgeons; label = self-reported level, N (4 surgeons, 19 trials), I (2, 10), E (2, 10). 76 kinematic channels at 30\,Hz and endoscope video. Official LOUO folds hold out one surgeon, hence one class. Only \alert{two surgeons per trained class}.
+\vspace{4pt}
+\fig[0.66\textheight]{fig2_data.pdf}
+\end{frame}
+
+\begin{frame}{Pipeline}
+\fig[0.60\textheight]{fig1_pipeline.pdf}
+\vspace{2pt}
+{\small Every block $\rightarrow$ standardise ($\rightarrow$ PCA for V-appear) $\rightarrow$ L2 logistic regression; $C$ chosen by an inner LOUO loop on the training surgeons only. Late fusion = mean of class probabilities.}
+\end{frame}
+
+\begin{frame}{Features}
+\begin{columns}[T]
+\column{0.5\textwidth}
+\textbf{Kinematics (patient-side instruments)}
+\begin{itemize}
+\item \textbf{K-simple (30)}: path length, speed, angular speed, idle fraction, economy, gripper statistics, duration, bimanual coordination.
+\item \textbf{K-texture (10)}, \alert{focused improvement}: approximate entropy, log dimensionless jerk, spectral entropy. Idea from Zia \& Essa: experts move more regularly.
+\end{itemize}
+\column{0.5\textwidth}
+\textbf{Video (left camera)}
+\begin{itemize}
+\item \textbf{V-appear}: frozen ResNet-18 at 1\,Hz, mean + SD of embeddings, in-fold PCA.
+\item \textbf{V-dyn (8)}: how fast consecutive embeddings change; cancels static appearance of a session.
+\item \textbf{V-flow (15)}: Farneback optical flow at 2\,Hz.
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Evaluation protocol}
+\begin{itemize}
+\item Metric: \textbf{pooled macro-F1} over the 39 out-of-fold predictions (per-fold macro-F1 is undefined with one class per fold).
+\item Uncertainty: \textbf{user-level bootstrap} (2000 resamples of surgeons) and an \textbf{exact permutation test} over all $8!/(4!\,2!\,2!) = 420$ label assignments.
+\item Pre-registered in \texttt{PROTOCOL.md}: all models and three comparisons fixed before the run; every model evaluated once.
+\item \textbf{Shortcut audit}: surgeon-identity probe per block; duration-only classifier; features residualised on log duration.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Results}
+\fig[0.58\textheight]{fig3_results.pdf}
+\vspace{2pt}
+{\small Majority \FMZero{}\quad|\quad \textbf{K-simple \FMOne{}} ($p=\PMOne{}$)\quad|\quad K+V-dyn (primary) \FMThree{}\quad|\quad K-simple+texture \FMFour{}}
+\end{frame}
+
+\begin{frame}{The three pre-declared comparisons}
+\centering
+\begin{tabular}{lccc}
+\toprule
+Comparison & $\Delta$ macro-F1 & 95\% user bootstrap & Verdict\\
+\midrule
+K-simple vs majority & \DOneZero{} & [\DLoOneZero{}, \DHiOneZero{}] & \textcolor{nusblue}{\textbf{supported}}\\
++ video (V-dyn) vs K-simple & \DThreeOne{} & [\DLoThreeOne{}, \DHiThreeOne{}] & not distinguishable\\
++ texture vs K-simple & \DFourOne{} & [\DLoFourOne{}, \DHiFourOne{}] & not distinguishable\\
+\bottomrule
+\end{tabular}
+\vspace{12pt}
+\begin{itemize}
+\item Video alone is not above chance (\FMTwoA{}, \FMTwoB{}, \FMTwoC{}).
+\item Every fusion variant scored \alert{below} kinematics alone.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Where it fails: the experts}
+\fig[0.42\textheight]{fig4_confusion.pdf}
+\begin{itemize}
+\item Novices F1 \FNMOne{}, intermediates \FIMOne{}, experts only \FEMOne{}: 5 of 10 expert trials called N, 4 called I.
+\item Holding out one expert leaves \alert{one} expert in training, so the model learns that person rather than expertise.
+\item Experts work at the pace of intermediates (median \DurE{}\,s vs \DurI{}\,s; novices \DurN{}\,s).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Per-surgeon results}
+\fig[0.60\textheight]{fig5_users.pdf}
+\vspace{2pt}
+{\small Experts D and E fail for every kinematic model. Fusion hurts intermediate F (K-simple 4/5 $\rightarrow$ fused \UFMThree{}). V-appear is right or wrong for whole surgeons, as an identity detector would be.}
+\end{frame}
+
+\begin{frame}{Shortcut audit: identity and pace}
+\fig[0.52\textheight]{fig6_audit.pdf}
+\begin{itemize}\small
+\item Surgeon identity from one trial: K-simple \IdKSimple{}, V-appear \IdVAppear{} (chance 0.125).
+\item Duration alone reaches \FCOne{}; removing log duration from K-simple drops it from \FMOne{} to \FCTwo{}.
+\item Texture failed: log jerk vs log duration $|r| = \PaceKTextureMax{}$, identity \IdKTexture{}. V-dyn mostly repeats pace ($|r|$ \PaceVDyn{}).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{How this differs from prior work}
+\begin{itemize}
+\item Strict unseen-surgeon evaluation with macro-F1 and explicit uncertainty; many published near-100\% results use LOSO.
+\item Zia \& Essa's 88.2\% LOUO accuracy cannot be reproduced as a pooled count over 39 trials, so it is not directly comparable.
+\item We \textbf{measure} identity and pace shortcuts instead of assuming a high score means skill.
+\item Pre-registration and an exact permutation test make negative results credible.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+\item Simple kinematic statistics transfer to new surgeons (\FMOne{} vs \FMZero{}), mostly through \alert{pace}.
+\item Whole-frame video and simple fusion did not help; motion texture did not help.
+\item Experts cannot be learned from one training expert.
+\item Next: more surgeons (all JIGSAWS tasks, other datasets), pace-independent features, instrument-region video, fusion weights learned in-fold.
+\end{itemize}
+\vspace{10pt}
+{\small\color{muted} AI tools: Claude Code (Claude Fable 5.1, Claude Opus 5.5) helped plan, code, run and write; the group reviewed everything and is responsible for the work.}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{tikzpicture}[remember picture,overlay]
+\fill[nusblue] (current page.south west) rectangle ([yshift=1.3cm]current page.south east);
+\fill[nusorange] ([yshift=1.3cm]current page.south west) rectangle ([yshift=1.42cm]current page.south east);
+\node[inner sep=0] at ([yshift=1.9cm]current page.center) {\includegraphics[height=1.6cm]{NationalUniversityofSingapore.pdf}};
+\node[align=center] at ([yshift=-0.2cm]current page.center) {{\LARGE\bfseries\color{nusblue}Thank you}\\[8pt]{\color{muted}Questions?}};
+\end{tikzpicture}
+\end{frame}
+
+\end{document}
