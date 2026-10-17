@@ -1,6 +1,6 @@
 **English** | [中文](README_zh.md)
 
-# JIGSAWS-SkillLOUO: novice / intermediate / expert from kinematics and video, on surgeons the model has never seen
+# RobotSurgery-SkillClassifier: is this surgeon a novice, intermediate or expert? Robot kinematics and video on JIGSAWS, tested on surgeons the model has never seen
 
 ![Pooled macro-F1 of every model under leave-one-user-out, with 95% user-level bootstrap intervals (a), and the paired differences behind the three pre-declared comparisons (b)](figures/fig3_results.png)
 

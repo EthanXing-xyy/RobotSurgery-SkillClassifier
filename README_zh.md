@@ -1,6 +1,6 @@
 [English](README.md) | **中文**
 
-# JIGSAWS-SkillLOUO：用运动学和视频给“没见过的外科医生”分新手 / 中级 / 专家
+# RobotSurgery-SkillClassifier：用运动学和视频给“没见过的外科医生”分新手 / 中级 / 专家
 
 ![留一用户评估下各模型的合并 macro-F1 及 95% 用户级 bootstrap 区间（a），以及三项预先声明比较的配对差值（b）](figures/fig3_results_zh.png)
 
